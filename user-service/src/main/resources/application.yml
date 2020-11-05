@@ -1,0 +1,30 @@
+server:
+  port: 2208
+
+spring:
+
+  datasource:
+    platform: postgresql
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/liquibasedata1
+    username: postgres
+    password: admin
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
+
+  liquibase:
+    enabled: true
+    change-log: classpath:/db.changelog/db.changelog-master.xml
+
+
+
+

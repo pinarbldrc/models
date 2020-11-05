@@ -1,0 +1,4 @@
+rootProject.name = 'module.Springboot'
+include 'user-service'
+include 'product-service'
+

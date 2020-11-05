@@ -1,0 +1,42 @@
+plugins {
+
+	id 'java'
+	id 'maven'
+
+
+}
+
+allprojects {
+	apply plugin: 'eclipse'
+	apply plugin: 'maven'
+	apply plugin: 'idea'
+	apply  from:  "${rootDir}/dependencies.gradle"
+}
+
+subprojects {
+
+	apply plugin: 'java'
+	group = 'com.pinar'
+	version = 'v.0.0.1'
+
+	sourceCompatibility = JavaVersion.VERSION_11
+	targetCompatibility= JavaVersion.VERSION_11
+}
+
+allprojects {
+
+	repositories {
+		mavenCentral()
+	}
+
+}
+
+
+configurations {
+
+	compileOnly{
+
+		extendsFrom annotationProcessor
+
+	}
+}
