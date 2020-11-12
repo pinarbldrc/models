@@ -9,6 +9,7 @@ public class ModelUserApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(ModelUserApplication.class,args);
+        //vnbgrjknshlt
 
     }
 
